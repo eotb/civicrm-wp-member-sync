@@ -939,6 +939,9 @@ class Civi_WP_Member_Sync_Admin {
 
 		// Get our sync method.
 		$method = $this->setting_get_method();
+		
+		// Get our default role
+		$default_wp_role = $this->setting_get_default_wp_role();
 
 		// Get all schedules.
 		$schedules = $this->plugin->schedule->intervals_get();
